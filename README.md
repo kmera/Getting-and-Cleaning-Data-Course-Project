@@ -1,8 +1,3 @@
----
-output: 
-  html_document: 
-    toc: yes
----
 # Getting and Cleaning Data Course Project
 
 # Project Summary
