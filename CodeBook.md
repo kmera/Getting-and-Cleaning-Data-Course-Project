@@ -1,8 +1,3 @@
----
-output: 
-  html_document: 
-    toc: yes
----
 #Getting and Cleaning Data Course Project - CodeBook
 
 This document shows a description of the variables, the data, and the transformations or work that is performed to clean up the data.
