@@ -1,14 +1,14 @@
-#Getting and Cleaning Data Course Project - CodeBook
+# Getting and Cleaning Data Course Project - CodeBook
 
 This document shows a description of the variables, the data, and the transformations or work that is performed to clean up the data.
 
-#Variables
+# Variables
 The tidy data set file (tidydata_set.txt) has 81 variables (and 180 observations), which are:
 
-#id: 
+# id: 
 it’s an integer from 1 to 30 and corresponds the group of 30 volunteers within an age bracket of 19-48 years that were selected for this experiment.
 
-#activity: 
+# activity: 
 it’s a factor which represents the six activities performed for each person (id) and the values are: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
 
 
@@ -16,7 +16,7 @@ Basically, there are both time domain and frequency domain measurements that wer
 According to the UCI Machine Learning Repository, features are normalized and bounded within [-1,1], the units used for the accelerations (total and body) are g's (gravity of earth -> 9.80665 m/seg2), and the gyroscope units are rad/seg.
 From the entire raw data, in this tidy data set are only included mean and standard deviation measures.
 
-#Time domain measures:
+# Time domain measures:
 Body acceleration mean 3-axial signals in the X, Y and Z directions:
 
 • TimeBodyAccelerometerMeanX
@@ -136,7 +136,7 @@ Body gyroscope magnitude measures:
 • TimeBodyGyroscopeJerkMagnitudeStandardDeviation
 
 
-#Frequency domain measures:
+# Frequency domain measures:
 
 Body acceleration mean 3-axial signals in the X, Y and Z directions:
 
@@ -249,7 +249,7 @@ Body gravity magnitude measures:
 • FrequencyBodyGyroscopeJerkMagnitudeMeanFrequency
 
 
-#Data
+# Data
 As a result of the run_analysis.R script, the tidy data set was created and generated a text file named ‘tidydata_set.txt’.
 
 #Transformations
@@ -301,7 +301,7 @@ The final transformations consist of modifying abbreviations to correct and show
 "FreqZ$" -> "FrequencyZ"
 
 
-#Study design
+# Study design
 In this case, the study design was done by University of California, Irvine (UCI) and the data set information can be found in: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
