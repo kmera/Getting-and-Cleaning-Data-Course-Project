@@ -160,7 +160,6 @@ x_var <- sub("FreqY$", "FrequencyY", x_var)
 
 x_var <- sub("FreqZ$", "FrequencyZ", x_var)
 
-
 # Output
 
 To get the final data set, complete and tidy, the last step is to assign the descriptive variables vector (x_var) to the complete data set named ‘complete_data’:
@@ -170,8 +169,6 @@ colnames(complete_data) <- c(x_var)
 And finally, eliminating temporal variable ‘x_var’.
 
 rm(x_var) 
-
-#-------------------------------------------------------------------------------------
 
 The last requirement of this assignment is to create a second, independent tidy data set with the average of each variable for each activity and each subject, so:
 Loading complete_data in a new ‘tibble’ variable to make sure the use of dplyr package.
@@ -184,8 +181,6 @@ tidydata_mean <- tidydata_mean %>%
         group_by(id, activity) %>%
         summarise_all(mean)
 The second tidy data set has been created and is the set ‘tidydata_mean’.
-
---------------------------------------------------------------------------------------
 
 As was mentioned in the Repository Contents point, it includes the file ‘tidydata_set.txt’ which is generated in the following way:
 
